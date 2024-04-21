@@ -61,8 +61,8 @@ def spheresCommand(message):
 @bot.message_handler()
 def answerQuestion(message):
     markup = types.InlineKeyboardMarkup()
-    btn1 = types.InlineKeyboardButton('Все ключевые элементы выделены верно', callback_data='sendToDepartment')
-    markup.row(btn1)
+    btn9 = types.InlineKeyboardButton('Все ключевые элементы выделены верно', callback_data='sendToDepartment')
+    markup.row(btn9)
     btn8 = types.InlineKeyboardButton('❌ Гр. тем', callback_data='changeGroups')
     btn3 = types.InlineKeyboardButton('❌ Тему', callback_data='changeTheme')
     btn4 = types.InlineKeyboardButton('❌ Исп. орг.', callback_data='changeDepartment')
