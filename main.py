@@ -12,7 +12,7 @@ def newChat(message):
 
 @bot.message_handler(commands=['help'])
 def helpCommand(message):
-    bot.send_message(message.chat.id, f'<b>Dvora</b> может помочь вам с решением разного рода социальных вопросов.\n\n'
+    bot.send_message(message.chat.id, f'Наш бот может помочь вам с решением разного рода социальных вопросов.\n\n'
                                       f'<b>Доступные команды:</b>\n'
                                       f'/start - начало работы с ботом\n'
                                       f'/help - помощь по боту\n'
