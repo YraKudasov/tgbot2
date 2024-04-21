@@ -26,7 +26,7 @@ def helpCommand(message):
 
 @bot.message_handler(commands=['spheres'])
 def spheresCommand(message):
-    bot.send_message(message.chat.id, f'<b>Сферы, в которых бот может вам помочь:</b>\n\n'
+    bot.send_message(message.chat.id, f'<u>Сферы, в которых бот может вам помочь:</u>\n\n'
                                       f'<em>Безопасность</em>\n'
                                       f'<em>Благоустройство</em>\n'
                                       f'<em>Газ и топливо</em>\n'
