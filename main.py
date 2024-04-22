@@ -75,7 +75,7 @@ def answerQuestion(message):
                                       f'Проверьте, пожалуйста, правильность определенных данных', parse_mode='HTML', reply_markup=markup)
 
 
-@bot.callback_query_handler(func=lambda callback:True)
+@bot.callback_query_h(func=lambda callback:True)
 def callback_message(callback):
     if callback.data == 'sendToDepartment':
         bot.send_message(callback.message.chat.id, 'Ваш запрос успешно отправлен в ведомство!')
