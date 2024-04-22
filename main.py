@@ -63,7 +63,7 @@ def answerQuestion(message):
     markup = types.InlineKeyboardMarkup()
     btn9 = types.InlineKeyboardButton('Все ключевые элементы выделены верно', callback_data='sendToDepartment')
     markup.row(btn9)
-    btn8 = types.InlineKeyboardButton('❌ Гр. тем', callback_data='changeGroups')
+    btn8 = types.InlineKeyboardButton('❌ Гр. тем', callback_data='changeSpheres')
     btn3 = types.InlineKeyboardButton('❌ Тему', callback_data='changeTheme')
     btn4 = types.InlineKeyboardButton('❌ Исп. орг.', callback_data='changeDepartment')
     markup.row(btn8, btn3, btn4)
@@ -79,7 +79,7 @@ def answerQuestion(message):
 def callback_message(callback):
     if callback.data == 'sendToDepartment':
         bot.send_message(callback.message.chat.id, 'Ваш запрос успешно отправлен в ведомство!')
-    elif callback.data == 'changeGroups':
+    elif callback.data == 'changeSpheres':
         bot.send_message(callback.message.chat.id, 'Введите корректную группу тем:')
         bot.register_next_step_handler(callback.message, process_new_string)
 
@@ -89,7 +89,7 @@ def process_new_string(message):
     markup = types.InlineKeyboardMarkup()
     btn1 = types.InlineKeyboardButton('Все ключевые элементы выделены верно', callback_data='sendToDepartment')
     markup.row(btn1)
-    btn2 = types.InlineKeyboardButton('❌ Гр. тем', callback_data='changeGroups')
+    btn2 = types.InlineKeyboardButton('❌ Гр. тем', callback_data='changeSpheres')
     btn10 = types.InlineKeyboardButton('❌ Тему', callback_data='changeTheme')
     btn4 = types.InlineKeyboardButton('❌ Исп. орг.', callback_data='changeDepartment')
     markup.row(btn2, btn10, btn4)
