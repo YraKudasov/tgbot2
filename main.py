@@ -61,7 +61,7 @@ def spheresCommand(message):
 @bot.message_handler()
 def answerQuestion(message):
     markup = types.InlineKeyboardMarkup()
-    btn11 = types.InlineKeyboardButton('Все ключевые элементы выделены верно', callback_data='sendToDepartment')
+    btn11 = types.InlineKeyboardButton('Все ключевые элементы выделены верно', callback_data='sendToGovernment')
     markup.row(btn11)
     btn2 = types.InlineKeyboardButton('❌ Гр. тем', callback_data='changeGroups')
     btn3 = types.InlineKeyboardButton('❌ Тему', callback_data='changeTheme')
@@ -77,7 +77,7 @@ def answerQuestion(message):
 
 @bot.callback_query_handler(func=lambda callback:False)
 def callback_message(callback):
-    if callback.data == 'sendToDepartment':
+    if callback.data == 'sendToGovernment':
         bot.send_message(callback.message.chat.id, 'Ваш запрос успешно отправлен в ведомство!')
     elif callback.data == 'changeGroups':
         bot.send_message(callback.message.chat.id, 'Введите корректную группу тем:')
@@ -87,7 +87,7 @@ def callback_message(callback):
 
 def process_new_string(message):
     markup = types.InlineKeyboardMarkup()
-    btn1 = types.InlineKeyboardButton('Все ключевые элементы выделены верно', callback_data='sendToDepartment')
+    btn1 = types.InlineKeyboardButton('Все ключевые элементы выделены верно', callback_data='sendToGovernment')
     markup.row(btn1)
     btn13 = types.InlineKeyboardButton('❌ Гр. тем', callback_data='changeGroups')
     btn3 = types.InlineKeyboardButton('❌ Тему', callback_data='changeTheme')
