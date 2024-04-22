@@ -81,11 +81,11 @@ def callback_message(callback):
         bot.send_message(callback.message.chat.id, 'Ваш запрос успешно отправлен в ведомство!')
     elif callback.data == 'changeGroups':
         bot.send_message(callback.message.chat.id, 'Введите корректную группу тем:')
-        bot.register_next_step_handler(callback.message, process_new_string)
+        bot.register_next_step_handler(callback.message, process_new_str)
 
 
 
-def process_new_string(message):
+def process_new_str(message):
     markup = types.InlineKeyboardMarkup()
     btn1 = types.InlineKeyboardButton('Все ключевые элементы выделены верно', callback_data='sendToGovernment')
     markup.row(btn1)
