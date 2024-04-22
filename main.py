@@ -93,8 +93,8 @@ def process_new_string(message):
     btn3 = types.InlineKeyboardButton('❌ Тему', callback_data='changeTheme')
     btn7 = types.InlineKeyboardButton('❌ Исп. орг.', callback_data='changeDepartment')
     markup.row(btn6, btn3, btn7)
-    bot.send_message(message.chat.id, f'В вашем запросе были выделены следующие ключевые элементы:\n\n'
-                                      f'Группа тем - <b>Памятники и объекты культурного наследия</b>\n'
+    bot.send_message(message.chat.id, f'В вашем запросе были выделены следующие ключевые элементы:\n'
+                                      f'Группа тем - <b>Памятники и объекты культурного наследия</b>\n\n'
                                       f'Тема - <b>Памятники и объекты культурного наследия</b>\n'
                                       f'Исполнительный орган - <b>Росохранкультура</b>\n\n'
                                       f'Проверьте, пожалуйста, правильность определенных данных', parse_mode='HTML',
