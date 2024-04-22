@@ -89,7 +89,7 @@ def process_new_string(message):
     markup = types.InlineKeyboardMarkup()
     btn20 = types.InlineKeyboardButton('Все ключевые элементы выделены верно', callback_data='sendToDepartment')
     markup.row(btn20)
-    btn6 = types.InlineKeyboardButton('❌ Гр. тем', callback_data='changeGroups')
+    btn77 = types.InlineKeyboardButton('❌ Гр. тем', callback_data='changeGroups')
     btn3 = types.InlineKeyboardButton('❌ Тему', callback_data='changeTheme')
     btn7 = types.InlineKeyboardButton('❌ Исп. орг.', callback_data='changeDepartment')
     markup.row(btn6, btn3, btn7)
